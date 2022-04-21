@@ -1,0 +1,212 @@
+﻿<Window x:Class="FitnessAssistant_TUZHILAVDVORYANINAV_3ISP97.Windows.WelcomeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitnessAssistant_TUZHILAVDVORYANINAV_3ISP97.Windows"
+        mc:Ignorable="d"
+        Title="WelcomeWindow" Height="750" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="67*"/>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="67*"/>
+            <RowDefinition Height="49*"/>
+            <RowDefinition Height="48*"/>
+            <RowDefinition Height="67*"/>
+            <RowDefinition Height="49*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.2*"/>
+            <ColumnDefinition Width="0.7*"/>
+            <ColumnDefinition Width="0.7*"/>
+            <ColumnDefinition Width="0.7*"/>
+            <ColumnDefinition Width="0.2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border
+            Grid.ColumnSpan="5" 
+            Background="#FF1B357C"
+        />
+        <TextBlock
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Text="Фитнес помощник"
+            Foreground="White"
+            FontSize="20" Grid.Column="2" Margin="26,11,26,10"
+            />
+
+        <TextBlock Grid.ColumnSpan="3"
+                   Grid.Row="1"
+                   Text="Добро пожаловать, Мария!"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="20"
+                   Foreground="#FF1B357C"
+                   FontWeight="Medium" Grid.Column="1" Margin="202,20"/>
+
+        <Line Grid.ColumnSpan="3" 
+              Grid.Row="1" 
+              Grid.Column="1"
+              X1="170" Y1="60"
+              X2="490" Y2="60"
+              Stroke="#FF1B357C" />
+        <StackPanel Grid.Column="1"
+                    Grid.Row="2"
+                    Grid.ColumnSpan="2"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Margin="16,18,0,18" Grid.RowSpan="2">
+            <TextBlock 
+                Text="Ваши текущие показатели:"
+                FontSize="16"
+                Foreground="#FF1B357C"/>
+            <WrapPanel Margin="0 10">
+                <TextBlock
+                    Text="Вес(кг.): "
+                    FontSize="16"
+                    Foreground="#FF1B357C"/>
+
+                <TextBlock x:Name="tbWeight"
+                    Text="54"
+                    FontSize="16"
+                    Foreground="#FF1B357C" 
+                    FontWeight="Bold"
+                    Margin="5 0 0 0"/>
+
+                <TextBlock
+                    Text="Рост(см.): "
+                    FontSize="16"
+                    Margin="45 0 0 0"
+                    Foreground="#FF1B357C"/>
+
+                <TextBlock x:Name="tbHeight"
+                    Text="173"
+                    FontSize="16"
+                    Foreground="#FF1B357C" 
+                    FontWeight="Bold"
+                    Margin="5 0 0 0"/>
+
+                <TextBlock
+                    Text="Возраст: "
+                    FontSize="16"
+                    Foreground="#FF1B357C"
+                    Margin="45 0 0 0"/>
+
+                <TextBlock x:Name="tbAge"
+                    Text="29"
+                    FontSize="16"
+                    Foreground="#FF1B357C" 
+                    FontWeight="Bold"
+                    Margin="5 0 0 0"/>
+            </WrapPanel>
+        </StackPanel>
+
+        <Line Grid.ColumnSpan="3" 
+              Grid.Row="2" 
+              Grid.Column="1"
+              X1="0" Y1="90"
+              X2="666" Y2="90"
+              Stroke="#FF1B357C" Grid.RowSpan="2"/>
+
+        <StackPanel Grid.Row="4" Grid.Column="1"
+                    Grid.RowSpan="3" Grid.ColumnSpan="3"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="16,18,0,18">
+        
+            
+            <WrapPanel>
+                <TextBlock
+                Text="Индекс массы тела составляет:"
+                FontSize="16"
+                Foreground="#FF1B357C"
+                Width="120"
+                TextWrapping="Wrap"
+                />
+
+                <TextBlock x:Name="tbBMI"
+                Text="18.04 кг/м2 Недостаточная (дефицит) масса тела"
+                FontSize="16"
+                Foreground="#FF1B357C"
+                FontWeight="Bold"
+                Margin="50 22 0 0"
+                />
+            </WrapPanel>
+
+            <TextBlock
+                Text="Величина, позволяющая оценить степень соответствия массы человека и его роста и тем самым косвенно судить о том, является ли масса недостаточной, нормальной или избыточной. Важен при определении показаний для необходимости лечения."
+                FontSize="12"
+                Foreground="#FF1B357C"
+                FontStyle="Italic"
+                Margin="0 10 0 0"
+                TextWrapping="Wrap"
+                />
+        </StackPanel>
+
+        
+        <Line Grid.ColumnSpan="3" 
+              Grid.Row="5" 
+              Grid.Column="1"
+              X1="0" Y1="90"
+              X2="666" Y2="90"
+              Stroke="#FF1B357C" Grid.RowSpan="2"/>
+
+        <StackPanel Grid.Row="7" Grid.Column="1"
+                    Grid.RowSpan="3" Grid.ColumnSpan="3"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="16,18,0,18">
+
+
+            <WrapPanel>
+                <TextBlock
+                Text="Уровень базального метаболизма:"
+                FontSize="16"
+                Foreground="#FF1B357C"
+                Width="120"
+                TextWrapping="Wrap"
+                />
+
+                <TextBlock x:Name="tbBMR"
+                Text="1315 ккал/день"
+                FontSize="16"
+                Foreground="#FF1B357C"
+                FontWeight="Bold"
+                Margin="50 42 0 0"
+                />
+            </WrapPanel>
+
+            <TextBlock
+                Text="Это приблизительное количество калорий, которые вы бы сожгли, если бы целые сутки провели, ничего не делая. Это минимальное количество энергии, необьходимое для поддержания жизнедеятельности организма, включая такие его функции, как дыхание и сердцебиение."
+                FontSize="12"
+                Foreground="#FF1B357C"
+                FontStyle="Italic"
+                Margin="0 10 0 0"
+                TextWrapping="Wrap"
+                />
+        </StackPanel>
+
+        <WrapPanel Grid.Row="11" Grid.Column="1"
+                   Grid.RowSpan ="2" Grid.ColumnSpan="3"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center">
+            <Button x:Name="btnChangeSettings"
+                    Content="ИЗМЕНИТЬ ПОКАЗАТЕЛИ"
+                    FontSize="16"
+                    />
+            <Button x:Name="btnExit"
+                    Content="ВЫЙТИ"
+                    FontSize="16"
+                    Margin="50 0 0 0"/>
+        </WrapPanel>
+    </Grid>
+</Window>

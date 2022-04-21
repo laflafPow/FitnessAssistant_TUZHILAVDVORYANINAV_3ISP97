@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessAssistant_TUZHILAVDVORYANINAV_3ISP97", "FitnessAssistant_TUZHILAVDVORYANINAV_3ISP97.csproj", "{2CB02FC7-3967-45FC-BC29-FBB76ACB1716}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitnessAssistant_TUZHILAVDVORYANINAV_3ISP97.Tests", "..\FitnessAssistant_TUZHILAVDVORYANINAV_3ISP97.Tests\FitnessAssistant_TUZHILAVDVORYANINAV_3ISP97.Tests.csproj", "{F2538DDC-3D8C-4525-AA81-DF6D4F549256}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CB02FC7-3967-45FC-BC29-FBB76ACB1716}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CB02FC7-3967-45FC-BC29-FBB76ACB1716}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CB02FC7-3967-45FC-BC29-FBB76ACB1716}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CB02FC7-3967-45FC-BC29-FBB76ACB1716}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2538DDC-3D8C-4525-AA81-DF6D4F549256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2538DDC-3D8C-4525-AA81-DF6D4F549256}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2538DDC-3D8C-4525-AA81-DF6D4F549256}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2538DDC-3D8C-4525-AA81-DF6D4F549256}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CEE56361-9252-4CD0-8545-6A9FF5BFA3B9}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,122 @@
+﻿<Window x:Class="FitnessAssistant_TUZHILAVDVORYANINAV_3ISP97.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FitnessAssistant_TUZHILAVDVORYANINAV_3ISP97"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="550" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1.2*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="0.7*"/>
+            <RowDefinition Height="0.7*"/>
+            <RowDefinition Height="0.7*"/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="0.3*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border
+            Grid.ColumnSpan="3" 
+            Background="#FF1B357C"
+        />
+        <StackPanel Grid.ColumnSpan="3">
+            <TextBlock
+            Text="Фитнес помощник"
+            Foreground="White" 
+            FontFamily="Candara"
+            FontSize="20"
+            HorizontalAlignment="Center"
+            Margin="0 20 0 0" FontWeight="Bold"/>
+
+            <TextBlock
+            Width="500"
+            Text="Данная утилита отлично справляется не только с подсчетом калорий, но и подборкой персональной диеты, учетом физических нагрузок, подробным анализом продуктов и не только."
+            TextWrapping="Wrap"
+            TextAlignment="Center"
+            Foreground="White" 
+            FontFamily="Candara"
+            FontSize="14"
+            HorizontalAlignment="Center"
+            Margin="0 20 0 0"/>
+        </StackPanel>
+
+        <TextBlock Text="АВТОРИЗУЙТЕСЬ:"
+                   Grid.ColumnSpan="3"
+                   Grid.Row="1"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"/>
+
+        <TextBlock
+                    Text="Логин"
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Right"
+                    Margin="0 0 30 0"
+                    Foreground="#FF1B357C"/>
+
+        <TextBlock
+                    Text="Пароль"
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Right"
+                    Margin="0 0 30 0"
+                    Foreground="#FF1B357C"/>
+
+        <TextBox x:Name="tbLogin"
+            Grid.Row="2"
+            Grid.Column="1"
+            Width="200"
+            Height="40"
+            BorderBrush="#FF1B357C"/>
+
+        <TextBox x:Name="tbPassword"
+            Grid.Row="3"
+            Grid.Column="1"
+            Width="200"
+            Height="40"
+            BorderBrush="#FF1B357C"/>
+
+        <Button
+            x:Name="Enterbtn"
+            Grid.Column="1"
+            Grid.Row="4"
+            Width="200"
+            VerticalAlignment="Bottom"
+            Height="40"
+            Content="ВОЙТИ"
+            Background="#FF1B357C"
+            Foreground="White" Click="Enterbtn_Click"/>
+
+        <TextBlock Grid.Row="6"
+                   Grid.Column="1"
+                   Text="Нет аккаунта?"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Center"
+                   FontSize="13"
+                   Foreground="#FF1B357C"/>
+        <TextBlock Grid.Row="7"
+                   Grid.Column="1"
+                   VerticalAlignment="Center"
+                   FontSize="13"
+                   Foreground="#FF1B357C"
+                   x:Name="RegBTN"
+                   HorizontalAlignment="Center">
+            <Hyperlink Click="RegBTN_Click" NavigateUri="MainWindow">
+                Зарегистрироваться
+            </Hyperlink>
+        </TextBlock>
+                   
+    </Grid>
+</Window>
