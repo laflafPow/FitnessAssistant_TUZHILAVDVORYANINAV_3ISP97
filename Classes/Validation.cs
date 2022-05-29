@@ -94,7 +94,7 @@ namespace FitnessAssistant_TUZHILAVDVORYANINAV_3ISP97.Classes
 
         public static double CalculatorBMI(double height, double weight)
         {
-            height /= 100;
+            height = height / 100;
             double bmi = weight / Math.Pow(height, 2);
             bmi = (Math.Round(bmi, 2));
             return bmi;

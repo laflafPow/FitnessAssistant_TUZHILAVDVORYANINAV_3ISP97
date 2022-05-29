@@ -44,7 +44,7 @@ namespace FitnessAssistant_TUZHILAVDVORYANINAV_3ISP97.Windows
             txtFirstName.Text = user.FirstName;
             txtHeight.Text = user.Height.ToString();
             txtWeight.Text = user.Weight.ToString();
-            dpDateBirth.SelectedDate = user.DateBirst;
+            dpDateBirth.SelectedDate = user.Birthday;
 
             cbGender.SelectedIndex = user.idGender - 1;
 
@@ -138,7 +138,7 @@ namespace FitnessAssistant_TUZHILAVDVORYANINAV_3ISP97.Windows
                     editUser.FirstName = txtFirstName.Text;
                     editUser.Height = Convert.ToInt32(txtHeight.Text);
                     editUser.Weight = Convert.ToInt32(txtWeight.Text);
-                    editUser.DateBirst = dpDateBirth.SelectedDate.Value;
+                    editUser.Birthday = dpDateBirth.SelectedDate.Value;
                     editUser.idGender = (cbGender.SelectedItem as EF.Gender).idGender;
 
                     ClassHelper.AppData.Context.SaveChanges();
@@ -178,7 +178,7 @@ namespace FitnessAssistant_TUZHILAVDVORYANINAV_3ISP97.Windows
                     newUser.Height = Convert.ToInt32(txtHeight.Text);
                     newUser.Weight = Convert.ToInt32(txtWeight.Text);
 
-                    newUser.DateBirst = dpDateBirth.SelectedDate.Value;
+                    newUser.Birthday = dpDateBirth.SelectedDate.Value;
 
                     newUser.idGender = (cbGender.SelectedItem as EF.Gender).idGender;
 

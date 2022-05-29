@@ -166,13 +166,16 @@
         <!--Текст Боксы-->
 
 
-        <TextBox x:Name="txtLogin"
+        <TextBox 
+            x:Name="txtLogin"
             Grid.Row="2"
             Grid.Column="1"
             Width="180"
             BorderBrush="#FF1B357C"
             Margin="10,8,0,8"
-            HorizontalAlignment="Left"/>
+            HorizontalAlignment="Left"
+            VerticalContentAlignment="Center"
+            FontSize="14"/>
 
         <TextBox x:Name="txtPassword"
             Grid.Row="3"
@@ -180,7 +183,9 @@
             Width="180"
             BorderBrush="#FF1B357C"
             Margin="10,8,0,8"
-            HorizontalAlignment="Left"/>
+            HorizontalAlignment="Left"
+            VerticalContentAlignment="Center"
+            FontSize="14"/>
 
         <TextBox x:Name="txtLastName"
             Grid.Row="4"
@@ -188,7 +193,9 @@
             Width="180"
             BorderBrush="#FF1B357C"
             Margin="10,9,0,9"
-            HorizontalAlignment="Left"/>
+            HorizontalAlignment="Left"
+            VerticalContentAlignment="Center"
+            FontSize="14"/>
 
         <TextBox x:Name="txtFirstName"
             Grid.Row="5"
@@ -196,7 +203,9 @@
             Width="180"
             BorderBrush="#FF1B357C"
             Margin="10,9,0,8"
-            HorizontalAlignment="Left"/>
+            HorizontalAlignment="Left"
+            VerticalContentAlignment="Center"
+            FontSize="14"/>
 
         <TextBox x:Name="txtHeight"
             Grid.Row="6"
@@ -204,7 +213,9 @@
             Width="180"
             BorderBrush="#FF1B357C"
             Margin="10,9,0,9"
-            HorizontalAlignment="Left"/>
+            HorizontalAlignment="Left"
+            VerticalContentAlignment="Center"
+            FontSize="14"/>
 
         <TextBox x:Name="txtWeight"
             Grid.Row="7"
@@ -212,7 +223,9 @@
             Width="180"
             BorderBrush="#FF1B357C"
             Margin="10,8,0,8"
-            HorizontalAlignment="Left"/>
+            HorizontalAlignment="Left"
+            VerticalContentAlignment="Center"
+            FontSize="14"/>
 
         <DatePicker x:Name="dpDateBirth"
             Grid.Row="8"
@@ -220,7 +233,9 @@
             Width="180"
             BorderBrush="#FF1B357C"
             Margin="10,9,0,9"
-            HorizontalAlignment="Left"/>
+            HorizontalAlignment="Left"
+            VerticalContentAlignment="Center"
+            FontSize="14"/>
 
         <ComboBox x:Name="cbGender"
             Grid.Row="8"
@@ -228,7 +243,10 @@
             Width="180"
             BorderBrush="#FF1B357C"
             Margin="10,9,0,9"
-            HorizontalAlignment="Left"/>
+            HorizontalAlignment="Left"
+            VerticalContentAlignment="Center"
+            FontSize="14"      
+        />
 
         <!--___-->
         

@@ -17,7 +17,7 @@ namespace FitnessAssistant_TUZHILAVDVORYANINAV_3ISP97.EF
         public int idUser { get; set; }
         public string LastName { get; set; }
         public string FirstName { get; set; }
-        public System.DateTime DateBirst { get; set; }
+        public System.DateTime Birthday { get; set; }
         public double Weight { get; set; }
         public double Height { get; set; }
         public Nullable<decimal> Age { get; set; }
