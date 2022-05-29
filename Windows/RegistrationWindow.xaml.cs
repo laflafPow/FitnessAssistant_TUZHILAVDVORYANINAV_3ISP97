@@ -19,6 +19,9 @@ namespace FitnessAssistant_TUZHILAVDVORYANINAV_3ISP97.Windows
     /// </summary>
     public partial class RegistrationWindow : Window
     {
+        bool isEdit = false;
+        EF.User editUser = new EF.User();
+
         public RegistrationWindow()
         {
             InitializeComponent();
@@ -28,13 +31,53 @@ namespace FitnessAssistant_TUZHILAVDVORYANINAV_3ISP97.Windows
             cbGender.SelectedIndex = 0;      
         }
 
+        public RegistrationWindow(EF.User user)
+        {
+            InitializeComponent();
+            cbGender.ItemsSource = ClassHelper.AppData.Context.Gender.ToList();
+            cbGender.DisplayMemberPath = "GenderName";
+            cbGender.SelectedIndex = 0;
+
+            txtLogin.Text = user.Login;
+            txtPassword.Text = user.Password;
+            txtLastName.Text = user.LastName;
+            txtFirstName.Text = user.FirstName;
+            txtHeight.Text = user.Height.ToString();
+            txtWeight.Text = user.Weight.ToString();
+            dpDateBirth.SelectedDate = user.DateBirst;
+
+            cbGender.SelectedIndex = user.idGender - 1;
+
+            tbWelcome.Text = "Изменение данных";
+            btnEnter.Content = "Сохранить";
+
+            isEdit = true;
+
+            editUser = user;
+        }
+
         private void BtnEnter_Click(object sender, RoutedEventArgs e)
         {
-            if (Classes.Validation.ValidationLogin(txtLogin.Text) == false)
+            if (isEdit)
             {
-                MessageBox.Show("Недопустимый логин", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
+                if (editUser.Login != txtLogin.Text)
+                {
+                    if (Classes.Validation.ValidationLogin(txtLogin.Text) == false)
+                    {
+                        MessageBox.Show("Недопустимый логин", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                        return;
+                    }
+                }
             }
+
+            else
+            {
+                if (Classes.Validation.ValidationLogin(txtLogin.Text) == false)
+                {
+                    MessageBox.Show("Недопустимый логин", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+            }         
 
             if (Classes.Validation.ValidationPassword(txtPassword.Text) == false)
             {
@@ -66,58 +109,112 @@ namespace FitnessAssistant_TUZHILAVDVORYANINAV_3ISP97.Windows
                 return;
             }
 
+            if (dpDateBirth.SelectedDate.HasValue == false)
+            {
+                MessageBox.Show("Ошибка в поле даты", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             if (Classes.Validation.ValidationDateBirthday(dpDateBirth.SelectedDate.Value) == false)
             {
                 MessageBox.Show("Недопустимая дата рождения", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
-            var resClick = MessageBox.Show("Добавить пользователя?", "Подтверждение", MessageBoxButton.YesNo, MessageBoxImage.Question);
-
-            if (resClick == MessageBoxResult.No)
+            if (isEdit)
             {
-                return;
+                var resClick = MessageBox.Show("Изменить пользователя?", "Подтверждение", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+                if (resClick == MessageBoxResult.No)
+                {
+                    return;
+                }
+
+                try
+                {
+                    editUser.Login = txtLogin.Text;
+                    editUser.Password = txtPassword.Text;
+                    editUser.LastName = txtLastName.Text;
+                    editUser.FirstName = txtFirstName.Text;
+                    editUser.Height = Convert.ToInt32(txtHeight.Text);
+                    editUser.Weight = Convert.ToInt32(txtWeight.Text);
+                    editUser.DateBirst = dpDateBirth.SelectedDate.Value;
+                    editUser.idGender = (cbGender.SelectedItem as EF.Gender).idGender;
+
+                    ClassHelper.AppData.Context.SaveChanges();
+
+                    MessageBox.Show("Пользователь изменен");
+
+                    WelcomeWindow welcomeWindow = new WelcomeWindow(editUser);
+                    welcomeWindow.Show();
+                    this.Close();
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
 
-            try
+            else
             {
-                EF.User newUser = new EF.User();
+                var resClick = MessageBox.Show("Добавить пользователя?", "Подтверждение", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
-                newUser.Login = txtLogin.Text;
-                newUser.Password = txtPassword.Text;
+                if (resClick == MessageBoxResult.No)
+                {
+                    return;
+                }
 
-                newUser.LastName = txtLastName.Text;
-                newUser.FirstName = txtFirstName.Text;
+                try
+                {
+                    EF.User newUser = new EF.User();
 
-                newUser.Height = Convert.ToInt32(txtHeight.Text);
-                newUser.Weight = Convert.ToInt32(txtWeight.Text);
+                    newUser.Login = txtLogin.Text;
+                    newUser.Password = txtPassword.Text;
 
-                newUser.DateBirst = dpDateBirth.SelectedDate.Value;
+                    newUser.LastName = txtLastName.Text;
+                    newUser.FirstName = txtFirstName.Text;
 
-                newUser.idGender = (cbGender.SelectedItem as EF.Gender).idGender;
+                    newUser.Height = Convert.ToInt32(txtHeight.Text);
+                    newUser.Weight = Convert.ToInt32(txtWeight.Text);
+
+                    newUser.DateBirst = dpDateBirth.SelectedDate.Value;
+
+                    newUser.idGender = (cbGender.SelectedItem as EF.Gender).idGender;
 
 
-                ClassHelper.AppData.Context.User.Add(newUser);
-                ClassHelper.AppData.Context.SaveChanges();
+                    ClassHelper.AppData.Context.User.Add(newUser);
+                    ClassHelper.AppData.Context.SaveChanges();
 
-                MessageBox.Show("Пользователь добавлен");
+                    MessageBox.Show("Пользователь добавлен");
 
-                this.Close();
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show();
+                    this.Close();                   
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
             }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            }
+            
         }
 
         private void BtnCansel_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
-            this.Close();
+            if (isEdit == false)
+            {
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+                this.Close();
+            }
+            else
+            {
+                WelcomeWindow welcomeWindow = new WelcomeWindow(editUser);
+                welcomeWindow.Show();
+                this.Close();
+            }
         }
     }
 }

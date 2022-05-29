@@ -21,7 +21,7 @@ namespace FitnessAssistant_TUZHILAVDVORYANINAV_3ISP97.EF
         public double Weight { get; set; }
         public double Height { get; set; }
         public Nullable<decimal> Age { get; set; }
-        public string idGender { get; set; }
+        public int idGender { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
         public byte[] Photo { get; set; }

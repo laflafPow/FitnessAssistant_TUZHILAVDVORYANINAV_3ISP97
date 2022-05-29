@@ -94,21 +94,25 @@ namespace FitnessAssistant_TUZHILAVDVORYANINAV_3ISP97.Classes
 
         public static double CalculatorBMI(double height, double weight)
         {
+            height /= 100;
             double bmi = weight / Math.Pow(height, 2);
+            bmi = (Math.Round(bmi, 2));
             return bmi;
         }
 
-        public static double CalculatorBMR(string gender, int age, double height, double weight)
+        public static double CalculatorBMR(int gender, int age, double height, double weight)
         {
             double bmr;
-            if(gender == "Мужской")
+            if(gender == 1)
             {
                 bmr = 88.362 + 13.397 * weight + 4.799 * height - 5.677 * age;
+                bmr = (Math.Round(bmr, 2));
                 return bmr;
             }
             else
             {
                 bmr = 447.593 + 9.247 * weight + 3.098 * height - 4.33 * age;
+                bmr = (Math.Round(bmr, 2));
                 return bmr;
             }
         }

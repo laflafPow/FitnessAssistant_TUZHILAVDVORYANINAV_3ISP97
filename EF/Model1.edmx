@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="idGender" />
           </Key>
-          <Property Name="idGender" Type="nchar" MaxLength="1" Nullable="false" />
+          <Property Name="idGender" Type="int" Nullable="false" />
           <Property Name="GenderName" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
@@ -33,7 +33,7 @@
           <Property Name="Weight" Type="float" Nullable="false" />
           <Property Name="Height" Type="float" Nullable="false" />
           <Property Name="Age" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Computed" />
-          <Property Name="idGender" Type="nchar" MaxLength="1" Nullable="false" />
+          <Property Name="idGender" Type="int" Nullable="false" />
           <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Photo" Type="varbinary(max)" />
@@ -148,7 +148,7 @@
           <Key>
             <PropertyRef Name="idGender" />
           </Key>
-          <Property Name="idGender" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="idGender" Type="Int32" Nullable="false" />
           <Property Name="GenderName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="User" Relationship="FitnessAssistant_Tuzhiloff_Dvoryaninoff_3ISP97Model.FK_User_Gender" FromRole="Gender" ToRole="User" />
         </EntityType>
@@ -173,7 +173,7 @@
           <Property Name="Weight" Type="Double" Nullable="false" />
           <Property Name="Height" Type="Double" Nullable="false" />
           <Property Name="Age" Type="Decimal" Precision="18" Scale="0" annotation:StoreGeneratedPattern="Computed" />
-          <Property Name="idGender" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="idGender" Type="Int32" Nullable="false" />
           <Property Name="Login" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />

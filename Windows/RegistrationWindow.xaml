@@ -47,7 +47,8 @@
             Margin="0 10 0 0" FontWeight="Bold"/>
 
             <TextBlock
-                Text="Регистрация"
+                x:Name="tbWelcome"
+            Text="Регистрация"
             Foreground="White" 
             FontFamily="Candara"
             FontSize="16"

@@ -29,67 +29,94 @@
             Grid.ColumnSpan="3" 
             Background="#FF1B357C"
         />
+
         <StackPanel Grid.ColumnSpan="3">
             <TextBlock
-            Text="Фитнес помощник"
-            Foreground="White" 
-            FontFamily="Candara"
-            FontSize="20"
-            HorizontalAlignment="Center"
-            Margin="0 20 0 0" FontWeight="Bold"/>
+                Text="Фитнес помощник"
+                Foreground="White" 
+                FontFamily="Candara"
+                FontSize="20"
+                HorizontalAlignment="Center"
+                FontWeight="Bold"
+                Margin="0 20 0 0" 
+            />
 
             <TextBlock
-            Width="500"
-            Text="Данная утилита отлично справляется не только с подсчетом калорий, но и подборкой персональной диеты, учетом физических нагрузок, подробным анализом продуктов и не только."
-            TextWrapping="Wrap"
-            TextAlignment="Center"
-            Foreground="White" 
-            FontFamily="Candara"
-            FontSize="14"
-            HorizontalAlignment="Center"
-            Margin="0 20 0 0"/>
+                Width="500"
+                Text="Данная утилита отлично справляется не только с подсчетом калорий, но и подборкой персональной диеты, учетом физических нагрузок, подробным анализом продуктов и не только."
+                TextWrapping="Wrap"
+                TextAlignment="Center"
+                Foreground="White" 
+                FontFamily="Candara"
+                FontSize="14"
+                HorizontalAlignment="Center"
+                Margin="0 20 0 0"
+            />
         </StackPanel>
 
-        <TextBlock Text="АВТОРИЗУЙТЕСЬ:"
-                   Grid.ColumnSpan="3"
-                   Grid.Row="1"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"/>
+        <TextBlock 
+            Text="АВТОРИЗУЙТЕСЬ:"
+            FontFamily="Candara"
+            FontSize="14"
+            Foreground="#FF1B357C"
+            Grid.ColumnSpan="3"
+            Grid.Row="1"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+        />
 
         <TextBlock
-                    Text="Логин"
-                    Grid.Column="0"
-                    Grid.Row="2"
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Right"
-                    Margin="0 0 30 0"
-                    Foreground="#FF1B357C"/>
+            Text="Логин"
+            FontFamily="Candara"
+            FontSize="14"
+            Grid.Column="0"
+            Grid.Row="2"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Right"
+            Margin="0 0 30 0"
+            Foreground="#FF1B357C"
+        />
 
         <TextBlock
-                    Text="Пароль"
-                    Grid.Column="0"
-                    Grid.Row="3"
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Right"
-                    Margin="0 0 30 0"
-                    Foreground="#FF1B357C"/>
+            Text="Пароль"
+            FontFamily="Candara"
+            FontSize="14"
+            Grid.Column="0"
+            Grid.Row="3"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Right"
+            Margin="0 0 30 0"
+            Foreground="#FF1B357C"
+        />
 
-        <TextBox x:Name="tbLogin"
+        <TextBox 
+            x:Name="tbLogin"
+            FontFamily="Candara"
+            FontSize="14"
+            VerticalContentAlignment="Center"
             Grid.Row="2"
             Grid.Column="1"
             Width="200"
             Height="40"
-            BorderBrush="#FF1B357C"/>
+            BorderBrush="#FF1B357C"
+        />
 
-        <TextBox x:Name="tbPassword"
+        <TextBox 
+            x:Name="tbPassword"
+            FontFamily="Candara"
+            FontSize="14"
+            VerticalContentAlignment="Center"
             Grid.Row="3"
             Grid.Column="1"
             Width="200"
             Height="40"
-            BorderBrush="#FF1B357C"/>
+            BorderBrush="#FF1B357C"
+        />
 
         <Button
             x:Name="Enterbtn"
+            FontFamily="Candara"
+            FontSize="14"
             Grid.Column="1"
             Grid.Row="4"
             Width="200"
@@ -97,22 +124,31 @@
             Height="40"
             Content="ВОЙТИ"
             Background="#FF1B357C"
-            Foreground="White" Click="Enterbtn_Click"/>
+            Foreground="White" 
+            Click="Enterbtn_Click"
+        />
 
-        <TextBlock Grid.Row="6"
-                   Grid.Column="1"
-                   Text="Нет аккаунта?"
-                   VerticalAlignment="Bottom"
-                   HorizontalAlignment="Center"
-                   FontSize="13"
-                   Foreground="#FF1B357C"/>
-        <TextBlock Grid.Row="7"
-                   Grid.Column="1"
-                   VerticalAlignment="Center"
-                   FontSize="13"
-                   Foreground="#FF1B357C"
-                   x:Name="RegBTN"
-                   HorizontalAlignment="Center">
+        <TextBlock 
+            Grid.Row="6"
+            Grid.Column="1"
+            Text="Нет аккаунта?"
+            FontFamily="Candara"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Center"
+            FontSize="14"
+            Foreground="#FF1B357C"
+        />
+        
+        <TextBlock 
+            Grid.Row="7"
+            Grid.Column="1"
+            VerticalAlignment="Center"
+            FontFamily="Candara"
+            FontSize="14"
+            Foreground="#FF1B357C"
+            x:Name="RegBTN"
+            HorizontalAlignment="Center">
+            
             <Hyperlink Click="RegBTN_Click" NavigateUri="MainWindow">
                 Зарегистрироваться
             </Hyperlink>

@@ -41,7 +41,7 @@ namespace FitnessAssistant_TUZHILAVDVORYANINAV_3ISP97
 
             if (authUser != null)
             {
-                WelcomeWindow WelcomeWindow = new WelcomeWindow();
+                WelcomeWindow WelcomeWindow = new WelcomeWindow(authUser);
                 WelcomeWindow.Show();
                 this.Close();
             }

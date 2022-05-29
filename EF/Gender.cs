@@ -20,7 +20,7 @@ namespace FitnessAssistant_TUZHILAVDVORYANINAV_3ISP97.EF
             this.User = new HashSet<User>();
         }
     
-        public string idGender { get; set; }
+        public int idGender { get; set; }
         public string GenderName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

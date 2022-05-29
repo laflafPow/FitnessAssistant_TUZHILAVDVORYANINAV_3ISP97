@@ -36,22 +36,30 @@
             Grid.ColumnSpan="5" 
             Background="#FF1B357C"
         />
+        
         <TextBlock
             VerticalAlignment="Center"
             HorizontalAlignment="Center"
             Text="Фитнес помощник"
             Foreground="White"
-            FontSize="20" Grid.Column="2" Margin="26,11,26,10"
-            />
+            FontSize="20" 
+            Grid.Column="2" 
+            Margin="26,11,26,10"
+        />
 
-        <TextBlock Grid.ColumnSpan="3"
-                   Grid.Row="1"
-                   Text="Добро пожаловать, Мария!"
-                   VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
-                   FontSize="20"
-                   Foreground="#FF1B357C"
-                   FontWeight="Medium" Grid.Column="1" Margin="202,20"/>
+        <TextBlock 
+            x:Name="tbWelcome"
+            Grid.ColumnSpan="5"
+            Grid.Row="1"
+            Text="Добро пожаловать, Мария!"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            FontSize="20"
+            Foreground="#FF1B357C"
+            FontWeight="Medium" 
+            Grid.Column="0" 
+            Margin="202,20"
+        />
 
         <Line Grid.ColumnSpan="3" 
               Grid.Row="1" 
@@ -75,7 +83,8 @@
                     FontSize="16"
                     Foreground="#FF1B357C"/>
 
-                <TextBlock x:Name="tbWeight"
+                <TextBlock 
+                    x:Name="tbWeight"
                     Text="54"
                     FontSize="16"
                     Foreground="#FF1B357C" 
@@ -88,7 +97,8 @@
                     Margin="45 0 0 0"
                     Foreground="#FF1B357C"/>
 
-                <TextBlock x:Name="tbHeight"
+                <TextBlock 
+                    x:Name="tbHeight"
                     Text="173"
                     FontSize="16"
                     Foreground="#FF1B357C" 
@@ -101,7 +111,8 @@
                     Foreground="#FF1B357C"
                     Margin="45 0 0 0"/>
 
-                <TextBlock x:Name="tbAge"
+                <TextBlock 
+                    x:Name="tbAge"
                     Text="29"
                     FontSize="16"
                     Foreground="#FF1B357C" 
@@ -199,14 +210,28 @@
                    Grid.RowSpan ="2" Grid.ColumnSpan="3"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center">
-            <Button x:Name="btnChangeSettings"
-                    Content="ИЗМЕНИТЬ ПОКАЗАТЕЛИ"
-                    FontSize="16"
-                    />
-            <Button x:Name="btnExit"
-                    Content="ВЫЙТИ"
-                    FontSize="16"
-                    Margin="50 0 0 0"/>
+            <Button 
+                x:Name="btnChangeSettings"                   
+                Content="ИЗМЕНИТЬ ПОКАЗАТЕЛИ"
+                FontSize="14"
+                Height="40"
+                Width="200"
+                Foreground="White" 
+                BorderBrush="{x:Null}" 
+                Background="#FF1B357C" Click="btnChangeSettings_Click"
+            />
+            
+            <Button 
+                x:Name="btnExit"                   
+                Content="ВЫЙТИ"          
+                FontSize="14"
+                Height="40"
+                Width="200"                 
+                Margin="50 0 0 0"
+                Foreground="White" 
+                BorderBrush="{x:Null}" 
+                Background="#FF1B357C" Click="btnExit_Click"
+            />
         </WrapPanel>
     </Grid>
 </Window>
